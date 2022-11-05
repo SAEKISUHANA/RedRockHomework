@@ -1,5 +1,8 @@
-<script>
-    let number = [10,20,30];
-    const length = numbers.push(40);
-    console.log(length);console.log(number);
-</script>
+function mypush(arr)
+{
+    for (let i = 1;i < arguments.length; i++)
+    {
+        arr[arr.length+i-1] = arguments[i];
+    }
+    return arr.length;
+}
