@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>腾讯天气-首页</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/swiper.min.css">
+</head>
+
+<body>
+    <div class="mian">
+        <div id="header">
+            <div class="header">
+                <div class="content">
+                    <img src="./image/rightTopImg.svg" alt="">
+
+                    <div class="left_Box">
+                        <div id="air_parent">
+                            <p id="air">97</p>
+                            <p id="air_level">良</p>
+                        </div>
+                    </div>
+                    <div class="center_Box">
+                        <div class="search">
+                            <div>
+                                <img src="./image/location.png" alt="">
+                                <p id="city">北京</p>
+                                <div></div>
+                            </div>
+                        </div>
+                        <div class="center">
+                            <p id="tem">40</p>
+                            <p id="wea">多云</p>
+                            <div id="scrollContent">
+                                <div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right_Box">
+                        <div id="alarm">
+                            高温预警
+                        </div>
+                    </div>
+                </div>
+                <div class="backgroundImg">
+                    <img src="./image/bg04.png" alt="">
+                    <img src="./image/bg03.png" alt="">
+                    <img src="./image/bg02.png" alt="">
+                </div>
+            </div>
+            <img style="height: 100%; display: none;" src="./image/7105dc79de27e11e19319669272ec48.png" alt="">
+        </div>
+
+
+        <!-- 今天&明天 -->
+        <div class="day_weather">
+            <div class="today">
+                <div class="left">
+                    <p class="day">今天</p>
+                    <p id="today_day_wea">晴</p>
+                </div>
+                <div class="right">
+                    <p id="today_day_tem">39/24°</p>
+                    <img id="today_day_wea_img" src="./image/day/qing.png" alt="">
+                </div>
+            </div>
+            <div class="tomorrow">
+                <div class="left">
+                    <p class="day">明天</p>
+                    <p id="tomorrow_day_wea">多云</p>
+                </div>
+                <div class="right">
+                    <p id="tomorrow_day_tem">39/25°</p>
+                    <img id="tomorrow_day_wea_img" src="./image/day/yun.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <!-- 每小时天气 -->
+        <div class="time_weather" id="hours">
+            <!-- <div>
+                <p>16:00</p>
+                <img src="./image/day/qing.png" alt="">
+                <p>40°</p>
+            </div>
+            <div>
+                <p>16:00</p>
+                <img src="./image/day/qing.png" alt="">
+                <p>40°</p>
+            </div>
+            <div>
+                <p>16:00</p>
+                <img src="./image/day/qing.png" alt="">
+                <p>40°</p>
+            </div>
+            <div>
+                <p>16:00</p>
+                <img src="./image/day/qing.png" alt="">
+                <p>40°</p>
+            </div>
+            <div>
+                <p>16:00</p>
+                <img src="./image/day/qing.png" alt="">
+                <p>40°</p>
+            </div>
+            <div>
+                <p>16:00</p>
+                <img src="./image/day/qing.png" alt="">
+                <p>40°</p>
+            </div>
+            <div>
+                <p>16:00</p>
+                <img src="./image/day/qing.png" alt="">
+                <p>40°</p>
+            </div> -->
+        </div>
+        <!-- ECharts -->
+        <div class="echart_weather">
+            <div id="echarts_main" style="width: 150%; height: 420px; margin-bottom: 10px;"></div>
+        </div>
+        <!-- 生活指数轮播 -->
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <!-- <div class="swiper-item">
+                        <img src="./image/lvyou.png" alt="">
+                        <p>较不宜</p>
+                        <p>旅游</p>
+                    </div>
+                    <div class="swiper-item">
+                        <img src="./image/lvyou.png" alt="">
+                        <p>较不宜</p>
+                        <p>旅游</p>
+                    </div>
+                    <div class="swiper-item">
+                        <img src="./image/lvyou.png" alt="">
+                        <p>较不宜</p>
+                        <p>旅游</p>
+                    </div>
+                    <div class="swiper-item">
+                        <img src="./image/lvyou.png" alt="">
+                        <p>较不宜</p>
+                        <p>旅游</p>
+                    </div>
+                    <div class="swiper-item">
+                        <img src="./image/lvyou.png" alt="">
+                        <p>较不宜</p>
+                        <p>旅游</p>
+                    </div>
+                    <div class="swiper-item">
+                        <img src="./image/lvyou.png" alt="">
+                        <p>较不宜</p>
+                        <p>旅游</p>
+                    </div>
+                    <div class="swiper-item">
+                        <img src="./image/lvyou.png" alt="">
+                        <p>较不宜</p>
+                        <p>旅游</p>
+                    </div>
+                    <div class="swiper-item">
+                        <img src="./image/lvyou.png" alt="">
+                        <p>较不宜</p>
+                        <p>旅游</p>
+                    </div> -->
+                </div>
+                <div class="swiper-slide">
+                    <!-- <div class="swiper-item">
+                        <img src="./image/lvyou.png" alt="">
+                        <p>较不宜</p>
+                        <p>旅游</p>
+                    </div>
+                    <div class="swiper-item">
+                        <img src="./image/lvyou.png" alt="">
+                        <p>较不宜</p>
+                        <p>旅游</p>
+                    </div>
+                    <div class="swiper-item">
+                        <img src="./image/lvyou.png" alt="">
+                        <p>较不宜</p>
+                        <p>旅游</p>
+                    </div>
+                    <div class="swiper-item">
+                        <img src="./image/lvyou.png" alt="">
+                        <p>较不宜</p>
+                        <p>旅游</p>
+                    </div>
+                    <div class="swiper-item">
+                        <img src="./image/lvyou.png" alt="">
+                        <p>较不宜</p>
+                        <p>旅游</p>
+                    </div>
+                    <div class="swiper-item">
+                        <img src="./image/lvyou.png" alt="">
+                        <p>较不宜</p>
+                        <p>旅游</p>
+                    </div>
+                    <div class="swiper-item">
+                        <img src="./image/lvyou.png" alt="">
+                        <p>较不宜</p>
+                        <p>旅游</p>
+                    </div>
+                    <div class="swiper-item">
+                        <img src="./image/lvyou.png" alt="">
+                        <p>较不宜</p>
+                        <p>旅游</p>
+                    </div> -->
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <!-- 生活指数弹框 -->
+        <div class="life">
+            <div class="life_Bullet_box">
+                <div class="title">晾晒指数</div>
+                <div class="content">
+                    <div class="text">天气不错, 极适宜晾晒</div>
+                    <div class="btn">我知道了</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/dom-to-image.min.js"></script>
+    <script src="./js/echarts.min.js"></script>
+    <script src="./js/swiper.min.js"></script>
+    <script src="./js/weather.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

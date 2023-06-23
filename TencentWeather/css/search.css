@@ -1,0 +1,65 @@
+/* 顶部搜索 */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.header input {
+  flex: 1;
+  padding: 10px 20px;
+  border-radius: 50px;
+  margin-right: 20px;
+  background-color: #f1f1f1;
+}
+
+.header input:focus-visible {
+  outline: none;
+  border: none;
+}
+
+/* 历史记录&热门城市 */
+.history {
+  padding: 10px;
+  margin-bottom: 25px;
+}
+
+.history .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 17px;
+  margin-bottom: 15px;
+}
+
+.history .list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.history .list p {
+  width: 31%;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0 10px 10px 0;
+  background-color: #f1f1f1;
+}
+
+.history .list p:nth-child(3n) {
+  margin-right: 0;
+}
+
+/* 搜索列表 */
+.search_list {
+  border-top: 1px solid #e0e0e0;
+  padding: 0 10px 5px;
+}
+
+.search_list p {
+  padding: 15px 10px;
+  border-bottom: 1px solid #e0e0e0;
+}

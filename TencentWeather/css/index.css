@@ -1,0 +1,396 @@
+html,
+body {
+  height: 100%;
+  background-color: #f1f1f1;
+}
+
+img {
+  width: 100%;
+}
+.header {
+  background: linear-gradient(to bottom, #52afe9, #61c1ef, #61c1ef);
+}
+
+/* 头部 */
+.header>.content {
+  position: relative;
+  height: 430px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 右上角图片 */
+.header>.content > img {
+  position: absolute;
+  width: 20px;
+  top: 15px;
+  right: 10px;
+}
+.header>.content > div {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+}
+
+.header>.content .left_Box {
+  align-items: flex-start;
+}
+.header>.content .right_Box {
+  align-items: flex-end;
+}
+
+/* 头部左边黄色盒子 */
+.header>.content .left_Box > div {
+  padding: 10px 15px;
+  margin-left: 10px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #f0cc35;
+}
+
+.header>.content .left_Box > div > p:first-child {
+  margin-bottom: 5px;
+}
+
+/* 头部盒子---顶部搜索 */
+.header .search {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 10px;
+}
+
+.header .search div {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* 三角形 */
+.header .search div > div {
+  /* content: "";
+  position: absolute;
+  right: -25px; */
+  margin-left: 10px;
+  width: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid #fff;
+}
+
+/* 定位图标 */
+.header .search div > img {
+  width: 15px;
+  height: 15px;
+}
+
+/* 城市文字 */
+.header .search p {
+  margin-left: 10px;
+}
+
+/* 头部盒子---中间温度 */
+.header .center_Box {
+  position: relative;
+}
+.header .center_Box .center {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+
+.header .center_Box .center > p:first-child {
+  position: relative;
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.header .center_Box .center > p:first-child::after {
+  content: "°";
+  position: absolute;
+}
+
+.header .center_Box .center > p:nth-child(2) {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* 文字无限滚动 */
+.header .center_Box #scrollContent {
+  width: 100%;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.header .center_Box #scrollContent > div {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header .center_Box #scrollContent p {
+  position: absolute;
+  height: 15px;
+  /* opacity: 15; */
+  margin-bottom: 10px;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+
+/* 头部右边透明盒子 */
+.header>.content .right_Box > div {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 5px 5px 5px 13px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  font-size: 13px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* 头部右边透明盒子----圆点 */
+.header>.content .right_Box > div::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  left: 5px;
+  border-radius: 50%;
+  background-color: #ef8c6b;
+}
+
+/* 背景图 */
+.header .backgroundImg {
+  position: relative;
+}
+
+.header .backgroundImg > img:first-child {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 80;
+}
+
+.header .backgroundImg > img:nth-child(2) {
+  position: absolute;
+  bottom: 0;
+  z-index: 81;
+}
+
+.header .backgroundImg > img:last-child {
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  z-index: 99;
+}
+
+/* 今天&明天 */
+.day_weather {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+}
+
+.day_weather > div {
+  position: relative;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 20px;
+}
+
+.day_weather > div.today::after {
+  position: absolute;
+  right: 0;
+  content: "";
+  width: 1px;
+  height: 50%;
+  border-right: 1px solid #f1f1f1;
+}
+
+.day_weather > div img {
+  width: 30px;
+}
+
+.day_weather > div .day {
+  color: #aaa;
+}
+
+.day_weather > div > div > p:first-child {
+  margin-bottom: 15px;
+}
+
+.day_weather > div .left > p:last-child {
+  line-height: 30px;
+  white-space: nowrap; /* 保持文本在一行 */
+  overflow: hidden; /* 隐藏溢出的文本 */
+  text-overflow: ellipsis; /* 使用省略号表示溢出的文本 */
+  max-width: 100px; /* 设置最大宽度，根据需要调整 */
+}
+
+.day_weather > div .right {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+/* 每小时天气 */
+.time_weather {
+  display: flex;
+  overflow-x: scroll;
+  margin: 10px 0;
+  padding: 20px;
+  background-color: #fff;
+  -ms-overflow-style: none; /*隐藏滚动条*/
+  scrollbar-width: none; /*隐藏滚动条*/
+}
+
+/* 隐藏滚动条 */
+.time_weather::-webkit-scrollbar {
+  display: none;
+}
+
+.time_weather > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 40px;
+  font-size: 14px;
+}
+
+.time_weather > div:last-child {
+  margin: 0;
+}
+.time_weather > div > p:first-child {
+  color: #aaa;
+}
+.time_weather > div img {
+  width: 30px;
+  margin: 15px 0;
+}
+
+/* echarts */
+.echart_weather {
+  overflow: auto;
+  -ms-overflow-style: none; /*隐藏滚动条*/
+  scrollbar-width: none; /*隐藏滚动条*/
+}
+
+.echart_weather::-webkit-scrollbar {
+  display: none;
+}
+
+/* 生活指数轮播 */
+.swiper {
+  position: relative;
+  padding-bottom: 20px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.swiper .swiper-slide {
+  display: flex;
+  flex-wrap: wrap;
+}
+.swiper .swiper-item {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.swiper .swiper-item img {
+  width: 30px;
+  height: 30px;
+}
+
+.swiper .swiper-item p:nth-child(2) {
+  font-size: 15px;
+  margin: 10px 0 5px 0;
+  white-space: nowrap; /* 保持文本在一行 */
+  overflow: hidden; /* 隐藏溢出的文本 */
+  text-overflow: ellipsis; /* 使用省略号表示溢出的文本 */
+  max-width: 100px; /* 设置最大宽度，根据需要调整 */
+}
+
+.swiper .swiper-item p:last-child {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 4px;
+  border-radius: 5px;
+  background-color: #e7e7e7;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #bfbfbf;
+}
+
+/* 生活指数弹框 */
+.life{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background: rgba(0, 0,0, 0.4);
+    backdrop-filter: blur(2px); 
+}
+
+.life_Bullet_box {
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.life_Bullet_box .title,
+.life_Bullet_box .content .btn{
+    padding: 20px 0;
+    font-size: 18px;
+    color: #fff;
+    background-color: #000;
+}
+
+.life_Bullet_box .content{
+    padding: 0 30px 20px;
+}
+
+.life_Bullet_box .content .text{
+    line-height: 25px;
+    padding: 30px 0;
+    text-align: left;
+}
+
+.life_Bullet_box .content .btn{
+    padding: 15px 0;
+    border-radius: 5px;
+}
